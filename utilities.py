@@ -2,16 +2,16 @@ from selenium import webdriver
 
 def init_webcrawler():
     driver = webdriver.Firefox()
-    driver.get(SITE DA DEFENSORIA)
-    driver.find_element_by_xpath('//*[@id="Text1"]').send_keys(USERNAME)
-    driver.find_element_by_xpath('//*[@id="Text2"]').send_keys(PASSWORD)
+    driver.get('SITE')
+    driver.find_element_by_xpath('//*[@id="Text1"]').send_keys('USER')
+    driver.find_element_by_xpath('//*[@id="Text2"]').send_keys('PASSWORD')
     driver.find_element_by_xpath('/html/body/div/div/div/div/form/button').click()
     driver.find_element_by_xpath('/html/body/div/div/div[2]/div[1]/div/ul/li[8]/ul/li/dl/dd/a').click()
     driver.find_element_by_xpath('/html/body/div/div/div[2]/div[1]/div/ul/li[8]/ul/li/dl/dd/div/ul/li[4]/a').click()
     driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/form/div/div[1]/div/label/select/option[2]').click()
     driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/form/div/div[2]/div/select/option[2]').click()
-    driver.find_element_by_xpath('//*[@id="datepicker"]').send_keys('01/06/2020')
-    driver.find_element_by_xpath('//*[@id="datepicker1"]').send_keys('27/10/2020')
+    driver.find_element_by_xpath('//*[@id="datepicker"]').send_keys('01/10/2020')
+    driver.find_element_by_xpath('//*[@id="datepicker1"]').send_keys('03/11/2020')
     driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/form/div/div[5]/div/input[1]').click()
 
     relatorio = driver.find_elements_by_tag_name('td')
